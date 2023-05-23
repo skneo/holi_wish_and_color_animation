@@ -25,10 +25,10 @@
 
         if ($_SERVER['REQUEST_METHOD'] == 'GET' && isset($_GET['wisher_name'])) {
             $wisher_name = $_GET['wisher_name'];
-            // echo  $wisher_name;
+            $host = $_SERVER['HTTP_HOST'];
             $wisher_name1 = str_replace(' ', '_', $wisher_name);
             echo "<p class='text-light'> Hello $wisher_name, share your Holi wish on Whatsapp </p> 
-            <a href='whatsapp://send?text=http://satishkushwah.in/holi/index.php?wisher_name=$wisher_name1' class='btn btn-success' data-action='share/whatsapp/share'  
+            <a href='whatsapp://send?text=$host/holi/index.php?wisher_name=$wisher_name1' class='btn btn-success' data-action='share/whatsapp/share'  
         target='_blank'> Share on WhatsApp </a> ";
      
         } else {
